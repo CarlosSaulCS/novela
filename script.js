@@ -46,40 +46,40 @@ const chapters = [
     title: 'Capítulo 2 · Mañanas y Ritmos',
     segments: [
       {
-        es: 'Allá amaneces antes que el sol; aquí todavía la noche se queda unos minutos más cuando tú ya saludas el día.',
-        en: 'There you wake before the sun; here the night still lingers a few more minutes when you are already greeting the day.',
-        ru: 'Там ты просыпаешься раньше солнца; здесь ночь держится ещё пару минут, пока ты уже приветствуешь день.',
-        vocab: [ ['amaneces','you wake at dawn'], ['noche','night'], ['minutos','minutes'] ]
+  es: 'A veces soy yo quien suelta primero el “buen día” y otras aparece el tuyo antes de que yo toque el teléfono.',
+  en: 'Sometimes I’m the one who drops the “good morning” first and other times yours appears before I even touch the phone.',
+  ru: 'Иногда я первым пишу «buen día», а иногда твоё сообщение всплывает ещё до того, как я беру телефон.',
+  vocab: [ ['buen día','good morning'], ['aparece','appears'], ['teléfono','phone'] ]
       },
       {
-        es: 'Me cuentas lo que desayunas: algo ligero, limpio; yo sonrío y pienso qué palabra nueva podría servirte hoy.',
-        en: 'You tell me what you have for breakfast: something light, clean; I smile and think which new word might help you today.',
-        ru: 'Ты рассказываешь, что ешь на завтрак: что‑то лёгкое, простое; я улыбаюсь и думаю, какое новое слово может тебе пригодиться сегодня.',
-        vocab: [ ['desayunas','you have breakfast'], ['ligero','light'], ['palabra','word'] ]
+  es: 'Sale la pregunta clásica: “¿ya desayunaste?”; a veces tú me la tiras primero y sólo reímos con el orden.',
+  en: 'The classic question comes out: “did you eat breakfast yet?”; sometimes you throw it at me first and we just laugh at the order.',
+  ru: 'Появляется классический вопрос: «уже позавтракала?»; иногда ты первая спрашиваешь меня, и мы смеёмся порядку.',
+  vocab: [ ['clásica','classic'], ['pregunta','question'], ['reímos','we laugh'] ]
       },
       {
-        es: 'Coincidimos en algo: viajar limpia la cabeza. A ti te ordena ideas; a mí me afila el paso.',
-        en: 'We agree on something: traveling clears the head. For you it organizes ideas; for me it sharpens my step.',
-        ru: 'Мы совпадаем в одном: путешествия очищают голову. Тебе они раскладывают мысли; мне — точат шаг.',
-        vocab: [ ['viajar','to travel'], ['cabeza','head'], ['ideas','ideas'] ]
+  es: 'Aunque respondas corto siempre estás; con dos palabras ya sé que sigues ahí marcando el ritmo.',
+  en: 'Even if you answer briefly you’re always there; with two words I know you’re still setting the rhythm.',
+  ru: 'Даже если отвечаешь коротко — ты есть; по паре слов понимаю, что ты держишь ритм.',
+  vocab: [ ['corto','short'], ['siempre','always'], ['ritmo','rhythm'] ]
       },
       {
-        es: 'Te digo que el español se agarra igual que una costumbre buena: despacio y seguido. No hay prisa; yo marco compás.',
-        en: 'I tell you Spanish is picked up like a good habit: slowly and consistently. No rush; I set the beat.',
-        ru: 'Я говорю, что испанский берётся как хорошая привычка: медленно и постоянно. Никакой спешки; я задаю ритм.',
-        vocab: [ ['costumbre','habit'], ['prisa','rush'], ['compás','beat'] ]
+  es: 'Del trabajo basta con un “tranquilo” o “movido” y ya imagino luces, gente y tu modo sereno.',
+  en: 'For work a simple “quiet” or “busy” is enough and I picture lights, people, and your calm style.',
+  ru: 'Про работу хватает одного «спокойно» или «оживлённо», и я уже представляю огни, людей и твою спокойную манеру.',
+  vocab: [ ['tranquilo','calm'], ['movido','busy'], ['sereno','serene'] ]
       },
       {
-        es: 'Si algo te inquieta o da un poco de miedo, lo nombras y listo; yo lo pongo del lado tranquilo.',
-        en: 'If something worries you or feels a bit scary, you name it and that’s it; I place it on the calm side.',
-        ru: 'Если что‑то тревожит или немного пугает — ты называешь это и всё; я ставлю это на спокойную сторону.',
-        vocab: [ ['inquieta','worries'], ['miedo','fear'], ['calmado','calm'] ]
+  es: 'Ya tarde calientas tu té y el vapor se vuelve señal de cierre; a veces tu “buenas noches” llega antes del mío.',
+  en: 'Late at night you heat your tea and the steam becomes a closing signal; sometimes your “good night” lands before mine.',
+  ru: 'Поздно вечером ты греешь чай, и пар — знак того, что день закрывается; иногда твоё «buenas noches» приходит раньше моего.',
+  vocab: [ ['tarde','late'], ['cierre','closing'], ['buenas noches','good night'] ]
       },
       {
-        es: 'Y si hoy ninguna palabra española te queda perfecta, no fuerces: tu forma de decir las cosas ya tiene brillo propio.',
-        en: 'And if today no Spanish word fits you perfectly, don’t force it: your way of saying things already has its own shine.',
-        ru: 'И если сегодня ни одно испанское слово не ложится идеально — не дави; твой способ говорить уже светится сам.',
-        vocab: [ ['brillo','shine'], ['propio','own'], ['forzar','to force'] ]
+  es: 'Se arma un vaivén parejo: buenos días compartidos, preguntas cruzadas, respuestas cortas pero constantes y té nocturno antes del descanso.',
+  en: 'A balanced back‑and‑forth forms: shared good mornings, crossed questions, short but steady replies and night tea before rest.',
+  ru: 'Складывается ровный обмен: общие buenos días, встречные вопросы, короткие но постоянные ответы и ночной чай перед отдыхом.',
+  vocab: [ ['vaivén','back and forth'], ['parejo','even'], ['constantes','steady'] ]
       }
     ]
   }
@@ -130,8 +130,9 @@ function renderChapter(index) {
 
   chaptersContainer.appendChild(wrapper);
   indicator.textContent = `${index + 1} / ${chapters.length}`;
-  prevBtn.disabled = index === 0;
-  nextBtn.disabled = index === chapters.length - 1;
+  // En navegación circular nunca deshabilitamos los botones
+  prevBtn.disabled = false;
+  nextBtn.disabled = false;
   updateProgress();
   saveState();
 }
@@ -158,8 +159,8 @@ function applyVocab(text, vocabList) {
 function escapeRegex(str) { return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
 
 // Events
-prevBtn.addEventListener('click', () => { if (current > 0) { current--; renderChapter(current); } });
-nextBtn.addEventListener('click', () => { if (current < chapters.length - 1) { current++; renderChapter(current); } });
+prevBtn.addEventListener('click', () => { current = (current - 1 + chapters.length) % chapters.length; renderChapter(current); });
+nextBtn.addEventListener('click', () => { current = (current + 1) % chapters.length; renderChapter(current); });
 
 document.getElementById('toggle-ru').addEventListener('click', e => {
   showRussian = !showRussian;
