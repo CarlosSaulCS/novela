@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Novela Interactiva - Capítulo 1</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div id="cover" class="cover-screen" aria-labelledby="cover-title" aria-describedby="cover-desc">
+    <div class="cover-inner">
+      <h1 id="cover-title">Entre Dos Mundos</h1>
+      <p id="cover-desc">Pequeña serie bilingüe para avanzar a tu ritmo.<br><span class="muted-line">Español · Inglés · Ruso opcional</span></p>
+      <button id="start-btn" class="cover-start">Entrar</button>
+      <div class="cover-hint">Activa la música cuando quieras. Vocab resalta palabras clave.</div>
+    </div>
+  </div>
+  <audio id="bg-audio" loop preload="auto">
+    <!-- Asegúrate de que cuentas con derechos para usar este archivo -->
+    <source src="assets/audio/Ludovico%20Einaudi%20-%20Experience.mp3" type="audio/mpeg" />
+  </audio>
+  <header class="app-header">
+    <h1>Entre Dos Mundos</h1>
+    <div class="controls">
+      <button id="play-audio" aria-pressed="false">🎵 Música</button>
+      <button id="toggle-ru" aria-pressed="false">RU</button>
+      <button id="vocab-mode" aria-pressed="false" title="Resaltar vocabulario">Vocab</button>
+      <div class="progress-wrapper" aria-label="Progreso del capítulo">
+        <div id="progress-bar"></div>
+      </div>
+    </div>
+  </header>
+  <main id="chapters" tabindex="0">
+    <!-- Chapters will be injected by script.js -->
+  </main>
+  <nav class="chapter-nav" aria-label="Navegación de capítulos">
+    <button id="prev" disabled>◀</button>
+    <span id="chapter-indicator">1 / 1</span>
+    <button id="next">▶</button>
+  </nav>
+  <footer class="app-footer">
+    <small>power by Code Solutions Studio</small>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
